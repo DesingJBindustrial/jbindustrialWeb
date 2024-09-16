@@ -1,0 +1,276 @@
+<!-- Modal para Consultar Precio -->
+<dialog id="productoModal">
+    <div class="producto-modal-content">
+        <div class="producto-imagen-wrapper">
+            <img src="/images/trucker/conjuntoImperneable.png" alt="Imagen de categoría de ropa de seguridad" id="productoImagen">
+        </div>        
+        <div class="producto-detalle">
+            <h2 id="productoTitulo">Título del Producto</h2>
+            <p id="productoDescripcion">Descripción del producto.</p>
+            <ul id="productoCaracteristicas">
+                <li>Gabardina Sanforizada 8 Oz.</li>
+                <li>Con Atraques en Bolsillo</li>
+                <li>Costuras Reforzadas</li>
+            </ul>
+            <div class="producto-colores">
+                <!-- <span class="color-circle" style="background-color: blue;"></span>
+                <span class="color-circle" style="background-color: white;"></span>
+                <span class="color-circle" style="background-color: black;"></span> -->
+            </div>
+            <p>Talle: 34/48, 50/60</p>
+            <div class="cajaBotonWhatsapp">
+                <a rel="noreferrer" target="_blank" href="https://api.whatsapp.com/send?phone=5491176513751&text=Hola,%20me%20gustaría%20saber%20más%20sobre%20sus%20productos.">
+                    <button id="contactarWhatsApp" class="botonWhatsApp">
+                        <i class="fa-brands fa-whatsapp"></i> Contactar
+                    </button>
+                </a>
+            </div>
+        </div>
+    </div>
+    <button id="cerrarProductoModal">Cerrar</button>
+</dialog>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const productoModal = document.getElementById('productoModal');
+        const cerrarProductoModal = document.getElementById('cerrarProductoModal');
+        const botonesConsultarPrecio = document.querySelectorAll('.botonConsultarPrecio');
+        const verMasButtons = document.querySelectorAll('.verMas');
+        const productoImagen = document.getElementById('productoImagen');
+        const productoTitulo = document.getElementById('productoTitulo');
+        const productoDescripcion = document.getElementById('productoDescripcion');
+        const productoCaracteristicas = document.getElementById('productoCaracteristicas');
+        const colorProducto = document.querySelector(".producto-colores")
+
+        botonesConsultarPrecio.forEach(boton => {
+            boton.addEventListener('click', function () {
+                const productoInfo = JSON.parse(boton.getAttribute('data-product'));
+
+                // Update modal with selected product info
+                productoImagen.src = productoInfo.imagen;
+                productoTitulo.textContent = productoInfo.titulo;
+                productoDescripcion.textContent = productoInfo.descripcion;
+
+                // Clear and add characteristics
+                productoCaracteristicas.innerHTML = "";
+                productoInfo.caracteristicas.forEach(caracteristica => {
+                    const li = document.createElement('li');
+                    li.textContent = caracteristica;
+                    productoCaracteristicas.appendChild(li);
+                });
+                colorProducto.innerHTML = "";
+                productoInfo.color.forEach(color => {
+                    const div = document.createElement('div');
+                    div.classList.add("color-circle");
+                    div.style.backgroundColor=color.valor;
+                    div.setAttribute("title", color.nombre);
+                   colorProducto.appendChild(div);
+                });
+                productoModal.showModal();
+            });
+        });
+
+        cerrarProductoModal.addEventListener('click', function () {
+            productoModal.close();
+        });
+
+        // Handle Ver más button clicks
+        
+    });
+</script>
+<style>
+
+:root {
+    --color-Background: #2A3D98;
+    --color-Texto: #F6F6F6;
+    --color-verdeAgua: #5DEBD7;
+    --color-hover: #5A72A0;
+    --color-Borde: #1679AB;
+
+    --fuente-krona: 'Krona One', sans-serif;
+    --fuente-montserrat: 'Montserrat', sans-serif;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+#productoModal {
+    border-radius: 10px;
+    padding: 20px;
+    width: 80%;
+    max-width: 800px;
+    background-color:  #2A3D98;; /* Fondo azul que estás utilizando */
+    margin: 5%;
+}
+
+.producto-modal-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.producto-imagen-wrapper {
+    padding: 10px;
+    border-radius: 8px;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#productoImagen{
+    width: 100%;
+    border-radius: 8px;
+    height: 50vh;
+}
+
+.producto-detalle {
+    width: 55%;
+    padding-left: 20px;
+    background-color: #ffffff; /* Fondo blanco para las características */
+    color: var(--color-texto); /* Color de texto que estás utilizando */
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.producto-detalle h2 {
+    margin-bottom: 15px;
+    font-size: 24px;
+    font-family: var(--fuente-krona);
+}
+
+.producto-detalle ul {
+    list-style: none;
+    padding: 0;
+}
+
+.producto-detalle ul li {
+    margin-bottom: 10px;
+}
+
+.producto-colores {
+    display: flex;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+:global(.color-circle) {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+}
+
+.botonWhatsApp {
+    display: flex;
+    align-items: center;
+    background-color: #25D366; /* Verde WhatsApp */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+    text-decoration: none;
+}
+
+#cerrarProductoModal {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 4px;
+    margin-left: 85%;
+    width: 15%;
+
+}
+a{
+        text-decoration: none;
+    }
+@media (max-width:700px) {
+    #productoModal {
+        margin-top: 0px;
+        border-top-width: 0px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 10px;
+        border-bottom-width: 0px;
+        padding-bottom: 10px;
+        border-left-width: 0px;
+        border-right-width: 0px;
+        margin-left: 21px;
+        /* border-radius: 10px; */
+        /* padding: 20px; */
+        width: 80%;
+        /* max-width: 800px; */
+        background-color: #2A3D98;
+    }
+    .producto-modal-content {
+        flex-wrap: wrap; /* Permite que los elementos se envuelvan en caso de espacio limitado */
+    }
+
+    .producto-imagen-wrapper {
+        width: 100%; /* Ancho completo para la imagen */
+        margin-bottom: 10px; /* Añade un margen inferior */
+    }
+
+    .producto-detalle {
+        width: 100%; /* Ancho completo para los detalles del producto */
+        padding: 10px; /* Reduce el padding */
+    }
+
+    .producto-detalle h2 {
+        font-size: 20px; /* Reduce el tamaño de fuente para el título */
+        margin-bottom: 10px; /* Reduce el margen inferior */
+    }
+
+    .producto-detalle ul li {
+        font-size: 14px; /* Ajusta el tamaño de la fuente de la lista */
+    }
+
+    .producto-colores {
+        justify-content: center; /* Centra los círculos de colores */
+        flex-wrap: wrap; /* Permite que se envuelvan si no hay suficiente espacio */
+    }
+
+    .color-circle {
+        width: 15px; /* Ajusta el tamaño del círculo */
+        height: 15px; /* Ajusta el tamaño del círculo */
+    }
+
+    .cajaBotonWhatsapp {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .botonWhatsApp {
+        width: 110%;
+        font-size: 12px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    #cerrarProductoModal[data-astro-cid-fmcq6tn4] {
+        width: 30%;
+        font-size: 14px;
+        background-color: #dc3545;
+        color: white;
+        border: none;
+        padding: 5px 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 4px;
+        margin-left: 36%;
+    }
+    a{
+        text-decoration: none;
+    }
+}
+
+
+</style>

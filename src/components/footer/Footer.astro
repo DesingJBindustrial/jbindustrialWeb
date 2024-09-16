@@ -1,0 +1,408 @@
+---
+import datos from "../../../data.json"; // Asegúrate de que la ruta sea correcta
+const { footer } = datos; // Extraer la sección "footer"
+---
+
+<footer class="footer">
+    <article class="contenedoraDelFooter">
+        <div class="logo-container">
+            <img class="logoFooter" src={footer.logo.src} alt={footer.logo.alt}>
+            <h1 class="tituloLogo">{footer.logo.titulo}</h1>
+        </div>
+        <p class="parrafoFooter">{footer.parrafoFooter}</p>
+
+        <section class="cajaDeRedes">
+            <!-- <article class="cajaDePoliticas">
+                <img class="imagenPoliticaFooter" src={footer.imagenes.fotoPolitica.src} alt={footer.imagenes.fotoPolitica.alt}>
+            </article> -->
+            <article class="cjaDeConsultas">
+                <div class="cajaListado">
+                    <h2 class="redesFooter">Ubicación</h2>
+                    <ul class="redesUl">
+                        <li>
+                            <a class="gogle" href={footer.redes.ubicacion[0].link} target="_blank">
+                                <i class="fa-solid fa-location-dot"></i> {footer.redes.ubicacion[0].texto}
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="cajaListado">
+                    <h2 class="redesFooter">Contactos</h2>
+                    <ul class="redesUl">
+                        {footer.redes.contactos.map(contacto => (
+                            <li >
+                                {contacto.tipo} 
+                                <a href={contacto.link} target="_blank" rel="noopener noreferrer">
+                                    {contacto.tipo === "WhatsApp" ? (
+                                        <i class="fa-brands fa-whatsapp"></i> // Ícono de WhatsApp
+                                    ) : contacto.tipo === "Correo electrónico" ? (
+                                        <i class="fa-regular fa-envelope"></i> // Ícono de correo electrónico
+                                    ) : null}
+                                </a>
+                            </li>
+                        ))}
+                    </ul>
+                </div>                
+                <div class="cajaListado">
+                    <h2 class="redesFooter">Redes</h2>
+                    <ul class="redesUl">
+                        {footer.redes.redesSociales.map(red => (
+                            <li>{red.tipo} <a href={red.link} target="_blank"><i class={`fa-brands fa-${red.tipo.toLowerCase()}`}></i></a></li>
+                        ))}
+                    </ul>
+                </div>
+                <div class="cajaListado">
+                    <h2 class="redesFooter">Pedidos</h2>
+                    <ul class="redesUl">
+                        {footer.redes.pedidos.map(pedido => (
+                            <li>{pedido.texto} <a href={pedido.link} target="_blank"><i class="fa-solid fa-clipboard"></i></a></li>
+                        ))}
+                    </ul>
+                </div>
+            </article>
+        </section> 
+    </article>
+        <a class="etiquetaA" >
+            <h6 class="tituloAV">Desarrollado</h6>
+            <img class="artesVisualesImg" src="/images/propagandas/artesVirtuales.png" alt="ARTES VISUALES">
+        </a> 
+</footer>
+
+<style>
+    .footer {
+    background-color: var(--color-Background);
+    color: var(--color-Texto);
+    padding: 20px;
+    text-align: center;
+}
+
+.contenedoraDelFooter {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.logoFooter {
+    width: 5vw;
+    height: auto;
+    margin-right: 3px;
+    margin-top: -5px;
+
+}
+
+.tituloLogo {
+        font-size: 2.25rem; /* Ajuste el tamaño inicial */
+        font-family: var(--fuente-krona);
+        font-weight: 600;
+}
+
+.parrafoFooter {
+    margin: 10px ;
+    width: 100vw;
+    font-size: 1.25em;
+    font-family: var(--fuente-krona);
+    font-weight: 400;
+}
+
+/* La cajaDeRedes ahora ocupa el 100% del ancho disponible */
+.cajaDeRedes {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+}
+
+/* La cjaDeConsultas ocupará el 40% del ancho disponible */
+.cjaDeConsultas{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    width: 82%;
+    margin-left: 5%;
+    align-content: center;
+}
+
+/* La cajaDePoliticas ocupará el 60% del ancho disponible */
+.cajaDePoliticas {
+    /* flex: 0 0 40%; */
+    /* margin-left: 10px; */
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    margin-left: 28%;
+}
+
+.cajaListado {
+    margin-bottom: 18px;
+    margin-left: 57px;
+    margin-right: 5px;
+    transition: background-color 0.8s ease; /* Agrega una transición suave */
+}
+
+.cajaListado:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Cambia a un color más oscuro o con opacidad */
+}
+
+.cajaDePoliticas h2, .cjaDeConsultas h2 {
+    font-size: 20px;
+    font-family: var(--fuente-krona);
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.cajaDePoliticas p, .cjaDeConsultas p {
+    font-size: 14px;
+    color: var(--color-TextoSecundario);
+    line-height: 1.5;
+}
+
+/* Formularios */
+.icomm-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2%;
+}
+
+
+.icomm-fields {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 80%;
+    align-items: center;
+}
+
+.icomm-fields input[type="submit"] {
+    background-color: #5a83eb;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.icomm-fields input[type="submit"]:hover {
+    background-color: var(--color-hover);
+}
+
+/* Redes Sociales */
+.redesFooter {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.redesUl {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 1px;
+}
+
+.redesUl li a i {
+    width: 85%;
+    color: black;
+    padding: 2%;
+}
+
+.redesUl li {
+    margin: 5px 0;
+}
+
+.gogle {
+    text-decoration: none;
+    color: inherit;
+    font-size: 15px;
+}
+
+.descripcionFooter {
+    font-size: 14px;
+    color: var(--color-TextoSecundario);
+    line-height: 1.5;
+    margin: 5px 0;
+}
+
+.textwidget {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.footer p:last-child {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #ccc;
+}
+.imagenPoliticaFooter {
+    width: vw;
+    border-radius: 9%;
+    padding: 5%;
+    /* justify-content: center; */
+    /* text-align: center; */
+    /* image-orientation: unset; */
+    margin-left: 61px;
+    margin-bottom: 40px;
+}
+
+/* Ajustes para pantallas menores a 768px */
+@media (max-width: 768px) {
+    .contenedoraDelFooter {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cjaDeConsultas, .cajaDePoliticas {
+        width: 90%;
+        margin: 10px 0;
+    }
+
+    .cajaDeRedes {
+    display: flex;
+    /* width: 0%; */
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    }
+    .footer {
+        background-color: var(--color-Background);
+        color: var(--color-Texto);
+        padding: 20px;
+        text-align: center;
+        width: 95vw;
+
+    }
+    .parrafoFooter {
+        margin: 10px;
+        width: 79vw;
+        font-size: 1.25em;
+        font-family: var(--fuente-krona);
+        font-weight: 400;
+    }
+}
+
+@media(max-width:600px){
+    .cjaDeConsultas{
+        width: 87%;
+        margin: 10px 0;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        /* width: 82%; */
+        /* margin-left: 5%; */
+        /* align-content: center; */
+        flex-direction: column;
+    }
+    .tituloLogo {
+        font-size: 1.25rem;
+        font-family: var(--fuente-krona);
+        font-weight: 600;
+    }
+}
+/* Ajustes para pantallas móviles (menores a 424px) */
+@media (max-width: 500px) {
+    .logoFooter {
+        width: 10vh; /* Ajusta el tamaño del logo para pantallas más pequeñas */
+    }
+
+    .tituloLogo {
+        font-size: 18px; /* Ajusta el tamaño del título */
+    }
+
+    .parrafoFooter {
+        font-size: 14px;
+        width: 84vw;
+    }
+
+    .redesFooter {
+        font-size: 16px; /* Ajusta el tamaño del título para redes */
+    }
+
+    .descripcionFooter {
+        font-size: 12px; /* Ajusta el tamaño de la descripción */
+    }
+    .cajapadre {
+    background-color: var(--color-Background);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    border-bottom: 2px solid #111d63;
+    flex-wrap: nowrap;
+    align-content: center;
+}
+
+    .cjaDeConsultas, .cajaDePoliticas {
+        width: 100%;
+        margin: 10px 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: stretch;
+        flex-wrap: nowrap;
+        margin-left: -4%;
+    }
+
+   .footer{
+    background-color: var(--color-Background);
+    color: var(--color-Texto);
+    padding: 0%;
+    text-align: center;
+    width: 100%;
+   }
+}
+.etiquetaA {
+    text-decoration: none;
+    display: flex;
+    position: relative;
+    padding: 5px;
+    flex-wrap: nowrap;
+    justify-content: center;
+    width: 100%;
+}
+
+.etiquetaA:hover {
+    background-color: rgba(0, 0, 0, 0.3); /* Aplica un fondo oscuro con transparencia al hacer hover */
+    border-radius: 10px; /* Añade un borde redondeado si deseas */
+}
+
+.tituloAV {
+    background-color: var(--color-Background);
+    color: var(--color-Texto);
+    position: relative;
+    left: 0%;
+    top: 1px;
+    font-weight: 400;
+    font-size: 1.2rem;
+}
+
+.artesVisualesImg {
+    width: 33px;
+    border-radius: 60%;
+    height: 30px;
+    position: relative;
+    left: 12px;
+    top: 42px;
+ }
+
+.etiquetaA:hover .tituloAV, 
+.etiquetaA:hover .artesVisualesImg {
+    filter: brightness(0.8); /* Oscurece el texto y la imagen al hacer hover */
+}
+</style>

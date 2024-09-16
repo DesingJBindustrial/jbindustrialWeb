@@ -1,0 +1,217 @@
+---
+import datos from "../../../data.json";
+const { quienesSomos } = datos; // Extraer la sección "quienesSomos"
+---
+<div class="cajaPadreQS">
+    <div class="quienesSomos">
+        <h2 class="subTitulo">{quienesSomos.titulo}</h2>
+    </div>
+    <div class="queOfrecemos">
+        <p class="subtituloParrafo">{quienesSomos.parrafo}</p>
+        <img class="logoQuinesSomos" src={quienesSomos.imagenes.logo.src} alt={quienesSomos.imagenes.logo.alt}>
+        <img class="imagenPolitica" src={quienesSomos.imagenes.fotoPolitica.src} alt={quienesSomos.imagenes.fotoPolitica.alt}>
+    </div>
+</div>
+
+<style> 
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    :root {
+        --color-Background: #2A3D98;
+        --color-Texto: #F6F6F6;
+        --color-verdeAgua: #5DEBD7;
+        --color-hover: #5A72A0;
+        --color-Borde: #1679AB;
+    
+        --fuente-krona: 'Krona One', sans-serif;
+        --fuente-montserrat: 'Montserrat', sans-serif;
+    }
+    
+    body {
+        font-family: 'Roboto', sans-serif;
+    }
+    
+    .quienesSomos {
+        color: rgb(8, 8, 8);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        width: 90vw; /* Cambiado a vw para mantener un ancho relativo a la ventana */
+        margin: 0 auto;
+        font-size: 2.5em;
+        font-family: (var(--fuente-krona));
+        font-weight: 600;
+    }
+    
+    .quieneSomos:hover .subTitulo {
+        font-size: 2.35rem;
+        transition: font-size 0.5s ease-in-out;
+    }
+    
+    .quieneSomos:hover .subtituloParrafo {
+        font-size: 1.1rem;
+        transition: font-size 0.5s ease-in-out;
+    }
+    
+    .subtitulo {
+        font-size: 1.25rem; /* Ajuste el tamaño inicial */
+        font-family: var(--fuente-krona);
+        margin: 5%;
+    }
+    
+    .subtituloParrafo {
+        font-family: var(--fuente-montserrat);
+        font-weight: 600;
+        font-size: 1.5rem;
+        width: 62%;
+        color: #fff;
+        text-align: center;
+    }
+    
+    .queOfrecemos {
+        background-color: #2A3D98;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        width: 90vw; /* Cambiado a vw para mantener un ancho relativo a la ventana */
+        margin: 0 auto;
+        padding: 20px;
+        border-radius: 8px;
+    }
+    
+    .imagenPolitica {
+        height: 50vh; /* Altura fija en relación con la ventana */
+        width: 40vw; /* Ancho fijo en relación con la ventana */
+        padding: 2%;
+        border-radius: 12%;
+    }
+    
+    .logoQuinesSomos {
+        width: 43vw;
+        height: 50vh;
+        margin: 0;
+        box-sizing: border-box;
+        padding: 23px;
+        margin-top: -18px;
+    }
+    
+    @media (max-width: 768px) {
+        .imagenPolitica {
+            height: 50vh; /* Ajuste la altura para pantallas más pequeñas */
+            width: 50vw; /* Ajuste el ancho para pantallas más pequeñas */
+            padding: 3%;
+        }
+        .logoQuinesSomos {
+            width: 33vw;
+            height: 35vh;
+            margin-top: 5vh;
+        }
+        .cajaPadreQS{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-items: center;
+            align-content: center;
+        }
+        .quienesSomos{
+            /*margin =0% */
+        }
+    }
+
+    @media (max-width:730px){
+        .quienesSomos {
+        color: rgb(8, 8, 8);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        width: 90vw;
+        margin: 0 auto;
+        font-size: 1.5em;
+        font-family: (var(--fuente-krona));
+        font-weight: 600;
+    }
+    .logoQuinesSomos {
+        width: 36vw;
+        height: 35vh;
+        margin-top: 5vh;
+    }
+    .imagenPolitica {
+        height: 68vh;
+        width: 65vw;
+        padding: 3%;
+    }
+    }
+    @media (max-width: 500px) {
+        .imagenPolitica {
+            height: 40vh;
+            width: 80vw;
+            padding: 0;
+        }
+        
+        .quienesSomos {
+            color: rgb(23, 23, 23);
+            padding: 20px;
+            font-size: 1.2em;
+        }
+        
+        .subtitulo {
+            font-size: 1rem; /* Ajuste el tamaño para móviles */
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        
+        .queOfrecemos {
+            background-color: #2A3D98;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            width: 90vw;
+            margin: 0 auto;
+            padding: 20px;
+            border-radius: 8px;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+        
+        .subtituloParrafo {
+            font-family: var(--fuente-montserrat);
+            font-weight: 600;
+            font-size: 0.9rem;
+            width: 80%;
+            color: #fff;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        .quieneSomos:hover .subTitulo {
+            font-size: 2rem;
+        }
+        
+        .quieneSomos:hover .subtituloParrafo {
+            font-size: 1rem;
+        }
+        
+        .logoQuinesSomos {
+            width: 50vw;
+            height: 25vh;
+            padding: 4%;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .cajaPadreQS{
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            align-items: center;
+        }
+    }
+    </style>
+    

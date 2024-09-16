@@ -1,0 +1,184 @@
+<article class="banner">
+    <div class="capa"></div>
+    <div class="info">
+        <h1 class="tituloLogo">JBIndustrial</h1>
+        <p class="subtitulo">Vestimenta de seguridad.</p>
+    </div>
+</article>
+
+<!-- <script>
+    // Suponiendo que el JSON se encuentra en un archivo llamado "bannerImages.json"
+    fetch('/path/to/bannerImages.json')
+        .then(response => response.json())
+        .then(datos => {
+            const bannerImages = datos.bannerImages;
+    
+            function createKeyframesCSS(images) {
+                let keyframes = '@keyframes banner {\n';
+    
+                images.forEach(image => {
+                    keyframes += `
+                        ${image.start}, ${image.end} {
+                            background-image: url('${image.url}');
+                        }\n`;
+                });
+    
+                keyframes += '}';
+                return keyframes;
+            }
+    
+            const styleSheet = document.createElement("style");
+            styleSheet.type = "text/css";
+            styleSheet.innerText = createKeyframesCSS(bannerImages);
+            document.head.appendChild(styleSheet);
+        })
+        .catch(error => console.error('Error al cargar el JSON:', error));
+    </script> -->
+
+<style>/* Estilos generales */
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    :root {
+        --color-Background: #2A3D98;
+        --color-Texto: #F6F6F6;
+        --color-verdeAgua: #5DEBD7;
+        --color-hover: #5A72A0;
+        --color-Borde: #1679AB;
+    
+        --fuente-krona: 'Krona One', sans-serif;
+        --fuente-montserrat: 'Montserrat', sans-serif;
+    }
+    
+    body {
+        font-family: 'Roboto', sans-serif;
+    }
+    
+    /* Banner */
+    .banner {
+        width: 99vw;
+        height: 90vh;
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+        position: relative;
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+        background-size: contain; 
+        background-position: center;
+        background-repeat: no-repeat;
+        margin-top: 72px;
+        animation: banner 10s infinite linear alternate;
+    }
+    
+    /* Capa semitransparente */
+    .capa {
+        width: 99vw;
+        height: 90vh; 
+        background: rgba(132, 132, 132, 0.6); 
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1; 
+    }
+    
+    /* Keyframes para animar las imágenes del banner */
+    @keyframes banner {
+        0%, 20% {
+            background-image: url('/images/propagandas/vistiendoLaIndustria.png');
+        }
+        25%, 45% {
+            background-image: url('/images/propagandas/personaEnObra.png');
+        }
+        50%, 70% {
+            background-image: url('/images/calzados/botitasNegras.png');
+        }
+        75%, 100% {
+           background-image: url('/images/trucker/conjuntoImperneable.png');
+        }
+    }
+    
+    /* Contenido informativo */
+    .info {
+        z-index: 2;
+        text-align: center;
+        color: white;
+        max-width: 600px;
+    }
+    
+    /* Estilos del título */
+    .info h1 {
+        text-decoration: underline;
+        font-size: 45px;
+        margin-bottom: 20px;
+        letter-spacing: 1px;
+        transition: letter-spacing 1s, transform 0.5s;
+    }
+    
+    .info h1:hover {
+        letter-spacing: 10px;
+        transform: scale(1.01);
+        transition: letter-spacing 0.7s, transform 0.5s;
+    }
+    
+    /* Estilos del subtítulo */
+    .info p {
+        color: #D1D4DE;
+        line-height: 1.7;
+        margin-bottom: 30px;
+    }
+    
+    /* Media query para pantallas mayores a 768px */
+    @media (max-width: 768px) {
+        .banner {
+            height: 90vh;
+            margin-top: 81px;
+            width: 100vw;
+        }
+    
+        .info h1 {
+            font-size: 35px;
+        }
+    
+        .info p {
+            font-size: 18px;
+        }
+        .capa{
+            width: 100vw;
+        }
+    }
+    @media (max-width:730px){
+        .banner {
+        height: 90vh;
+        margin-top: 27px;
+        width: 100vw;
+    }
+    }
+    /* Media query para pantallas menores a 425px */
+    @media (max-width: 500px) {
+        .banner {
+            height: 55vh;
+            margin-top: 38px;
+            background-size: contain;
+            width: 99vw;
+        }
+        .capa {
+            width: 99vw;
+            height: 55vh;
+        }
+        .info h1 {
+            font-size: 28px;
+        }
+    
+        .info p {
+            font-size: 16px;
+        }
+    }
+    
+
+
+
+</style>

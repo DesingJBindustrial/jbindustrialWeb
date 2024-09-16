@@ -1,0 +1,78 @@
+---
+import datos from "../../data.json"; // Importa el JSON con los contactos
+
+const { contactos } = datos.footer.redes; // Asegúrate de que `contactos` exista en `datos`
+---
+
+<div class="contacto-flotante">
+    <i class="fa-solid fa-comment-dots" id="desplegarContactos"></i>
+    <div class="contacto-opciones" id="contactoOpciones">
+        {contactos.map(contacto => {
+            return (
+                <a rel="noreferrer" target="_blank" href={contacto.link}>
+                    <i class={`fa-${contacto.tipo === 'WhatsApp' ? 'brands fa-whatsapp' : 'regular fa-envelope'}`}></i>
+                </a>
+            );
+        })}
+    </div>
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+    const desplegarContactos = document.getElementById('desplegarContactos');
+    const contactoOpciones = document.getElementById('contactoOpciones');
+
+    desplegarContactos.addEventListener('click', function () {
+        contactoOpciones.style.display = contactoOpciones.style.display === 'none' ? 'flex' : 'none';
+    });
+});
+
+</script>
+<style>
+    .contacto-flotante {
+    position: fixed;
+    bottom: 120px;
+    right: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 30;
+}
+
+#desplegarContactos {
+    font-size: 40px;
+    color: rgb(23, 23, 23);/* Color del icono de mensaje */
+    cursor: pointer;
+}
+
+.contacto-opciones {
+    display: none;
+    flex-direction: column;
+    margin-top: 10px;
+    align-items: center;
+}
+
+.contacto-opciones a {
+    margin: 10px 0;
+    font-size: 30px;
+    color: #25D366; /* Color de WhatsApp */
+}
+
+.contacto-opciones a i.fa-envelope {
+    color: #007bff; /* Color del correo */
+}
+
+.contacto-opciones a i.fa-whatsapp {
+    color: #25D366; /* Color de WhatsApp */
+}
+@media (max-width:500px){
+    .contacto-flotante {
+    position: fixed;
+    bottom: 203px;
+    right: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 30;
+}
+}
+</style>

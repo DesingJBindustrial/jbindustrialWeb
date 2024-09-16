@@ -1,0 +1,162 @@
+---
+// Importar el JSON con los datos
+import datos from "../../../data.json"; // Asegúrate de que la ruta sea correcta
+const { productoDestacado } = datos; // Extraer la sección "productoDestacado"
+---
+
+<div class="contedorProductoDestacado" id="productoDestacado">
+    <h2 class="subTituloDestacado">{productoDestacado.subTitulo}</h2>
+    <div class="ProductoDestacado">
+        <video width="100%" height="auto" autoplay loop muted>
+            <source src={productoDestacado.producto.video.src} type={productoDestacado.producto.video.type}>
+            Your browser does not support the video tag.
+        </video>
+        <div class="contenidoTexto">
+            <div class="h2Mameluco">{productoDestacado.producto.nombre}</div>
+            <p class="textoReferecia">
+                {productoDestacado.producto.descripcion}
+            </p>
+        </div>
+    </div>
+</div>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-Background: #2A3D98;
+    --color-Texto: #F6F6F6;
+    --color-verdeAgua: #5DEBD7;
+    --color-hover: #5A72A0;
+    --color-Borde: #1679AB;
+
+    --fuente-krona: 'Krona One', sans-serif;
+    --fuente-montserrat: 'Montserrat', sans-serif;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.subTituloDestacado {
+    color: rgb(8, 8, 8);
+    display: flex;
+    justify-content: center;
+    font-size: 3.25rem;
+    font-family: var(--fuente-krona);
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.ProductoDestacado {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center; /* Alinea todos los elementos del contenedor verticalmente al centro */
+    background-color: var(--color-Background);
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.ProductoDestacado video {
+    width: 45%;
+    height: auto;
+}
+
+.contenidoTexto {
+    width: 50%; /* Fija el ancho del texto al 50% del contenedor */
+    margin-left: 20px; /* Añade un margen a la izquierda para separarlo del video */
+    display: flex;
+    flex-direction: column; /* Organiza el h2 y el p en columna */
+    justify-content: center; /* Centra verticalmente el contenido */
+    color: #ffffff;
+}
+
+.h2Mameluco {
+    font-size: 2.25rem;
+    font-family: var(--fuente-krona);
+    margin-bottom: 10px; /* Añade un margen inferior para separar del párrafo */
+}
+
+.textoReferecia {
+    font-family: var(--fuente-montserrat);
+    font-weight: 600;
+    line-height: 1.6; /* Mejora la legibilidad del texto */
+}
+
+@media (max-width:768px){
+    .ProductoDestacado {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+        background-color: var(--color-Background);
+        width: 90%;
+        padding: 20px;
+        border-radius: 8px;
+        /* margin-left: 30px; */
+        /* margin-right: 30px; */
+    }
+}
+@media (max-width:730px){
+    .ProductoDestacado {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        /* margin-left: 10px; */
+        /* margin-right: 10px; */
+        width: 90vw;
+    }
+    video{
+        margin: 5%;
+        padding: 2%;
+    }
+}
+
+@media (max-width: 500px) {
+    .ProductoDestacado {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        margin-left: 10px;
+        margin-right: 10px;
+        width: 90vw;
+    }
+    
+    .subTituloDestacado {
+            color: rgb(8, 8, 8);
+        display: flex;
+        justify-content: center;
+        font-size: 1.25rem;
+        font-family: var(--fuente-krona);
+        margin-bottom: 20px;
+        margin-top: 20px;
+        margin-left: 4px;
+    }
+    .h2Mameluco {
+    font-size: 2.25rem;
+    font-family: var(--fuente-krona);
+    margin-bottom: 10px;
+    text-align: center;
+    }
+
+    .ProductoDestacado video {
+        width: 90%; /* Ajusta el ancho del video al 90% del contenedor */
+        margin-top: 20px; /* Añade un margen superior para separar del texto */
+    }
+
+    .contenidoTexto {
+        width: 90%; /* Asegúrate de que el texto ocupe el mismo ancho que el video */
+        margin-left: 0; /* Elimina el margen izquierdo para centrar el texto */
+    }
+    .contedorProductoDestacado{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+</style>

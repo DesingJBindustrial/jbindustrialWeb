@@ -1,0 +1,716 @@
+{
+    "header": {
+        "logo": {
+            "src": "/images/logo/android-chrome-192x192.png",
+            "alt": "JB Industrial Logo"
+        },
+        "tituloLogo": "JBIndustrial",
+        "hamburger": {
+            "id": "hamburgerButton",
+            "iconClass": "fa-solid fa-bars"
+        },
+        "navbar": {
+            "links": [
+                {
+                    "texto": "Inicio",
+                    "href": "#"
+                },
+                {
+                    "texto": "Ver más",
+                    "href": "#productoDestacado",
+                    "class": "VERmAS"
+                },
+                {
+                    "texto": "Categorías",
+                    "href": "#categorias"
+                },
+                {
+                    "texto": "Contactarnos",
+                    "href": "#",
+                    "id": "openContactModal"
+                }
+            ]
+        }
+    },
+    "quienesSomos": {
+        "titulo": "¿Quiénes somos?",
+        "parrafo": "Somos especialistas en la fabricación de uniformes Empresariales, Dotaciones y Distribuciones de Elementos de Protección Personal (EPP) de marcas certificadas.",
+        "imagenes": {
+            "fotoPolitica": {
+                "src": "/images/propagandas/fotoPolitica.png",
+                "alt": "Foto de Política"
+            },
+            "logo": {
+                "src": "/images/logo/android-chrome-512x512.png",
+                "alt": "Logo de Quiénes Somos"
+            }
+        }
+    },
+    "productoDestacado": {
+        "subTitulo": "Producto destacado",
+        "producto": {
+            "nombre": "Mameluco Trucker",
+            "video": {
+                "src": "/images/videos/mameluco.mp4",
+                "type": "video/mp4"
+            },
+            "descripcion": "¿Mameluco Trocker? Características Colores Talles S al 3XL -Confeccionado en tela Trucker, otorgándole gran resistencia y durabilidad.. -Cuenta con una capucha desmontable un tapacierre y manga ranglan."
+        }
+    },    "bannerImages": [
+        {
+            "url": "/images/propagandas/personaEnObra.png",
+            "start": "0%",
+            "end": "20%"
+        },
+        {
+            "url": "/images/propagandas/vistiendoLaIndustria.png",
+            "start": "25%",
+            "end": "45%"
+        },
+        {
+            "url": "/images/calzados/botitasNegras.png",
+            "start": "50%",
+            "end": "70%"
+        },
+        {
+            "url": "/images/Trucker/conjuntoImpermeable.png",
+            "start": "75%",
+            "end": "100%"
+        }
+    ],
+    "footer": {
+        "logo": {
+        "src": "/images/logo/android-chrome-192x192.png",
+        "alt": "JB Industrial Logo",
+        "titulo": "JBIndustrial"
+        },
+        "parrafoFooter": "Somos Líderes en distribución de elementos de protección personal y proveedores directos de marcas certificadas en seguridad industrial",
+        "redes": {
+        "ubicacion": [
+            {
+            "texto": "Campana 642, (Galería, Ciudad Campana), Local 50, Buenos Aires, Argentina",
+            "link": "https://www.google.com/maps/search/?api=1&query=Campana+642,+Galeria,+Ciudad+Campana,+Local+50,+Buenos+Aires,+Argentina"
+            }
+        ],
+        "contactos": [
+            {
+                "tipo": "WhatsApp",
+                "link": "https://api.whatsapp.com/send?phone=5491176513751&text=Hola,%20me%20gustaría%20saber%20más%20sobre%20sus%20productos."
+            },
+            {
+            "tipo": "Correo electrónico",
+            "link": "mailto:Jonavera10@gmail.com"
+            }
+        ],
+        "redesSociales": [
+            {
+            "tipo": "Facebook",
+            "link": "https://www.facebook.com/jonathan.vera.7121/"
+            },
+            {
+            "tipo": "Instagram",
+            "link": "https://www.instagram.com/jbindustrialoficial/"
+            },
+            {
+            "tipo": "LinkedIn",
+            "link": "https://www.linkedin.com/in/marketing-jbindustrial-ab1a54322/"
+            }
+        ],
+        "pedidos": [
+            {
+            "texto": "Quiero ser distribuidor",
+            "link": "https://forms.gle/CYbEHHMYDhKUMzay8"
+            }
+        ]
+        },
+    "imagenes": {
+        "fotoPolitica": {
+            "src": "/images/propagandas/fotoPolitica.png",
+            "alt": "Foto de Política"
+        }
+    }},
+    "productos": {
+        "Calzado": [
+            {
+                "id": "01",
+                "imagen": "/images/calzados/borcegoNegro-01.png",
+                "titulo": "Botin de Seguridad",
+                "descripcion": "Botin de Seguridad, diseñadas para ofrecer protección en entornos de trabajo.",
+                "caracteristicas": [
+                    "-Con puntera de acero",
+                    "-Norma IRAM Suela Febo",
+                    "-Dieléctrico, Antideslizante",
+                    "-Cuero descarne. Lengüeta cocida"
+                ],
+                "color": [
+                    { "nombre": "Negro", "valor": "black" }
+                ],
+                "talle": "38/45"
+            },
+            {
+                "id": "02",
+                "imagen": "/images/calzados/botas.png",
+                "titulo": "Botas de Seguridad",
+                "descripcion": "Botas ideales para trabajar en condiciones de lluvia.",
+                "caracteristicas": [
+                    "Plantilla antiperforación",
+                    "Material transpirable",
+                    "Diseño ergonómico"
+                ],
+                "color": [
+                    { "nombre": "Negro", "valor": "black" }
+                ],
+                "talle": "38/45"
+            },
+            {
+                "id": "03",
+                "imagen": "/images/calzados/botitasNegras.png",
+                "titulo": "Botitas de Seguridad (linea economica)",
+                "descripcion": "Botitas ideales para trabajar en condiciones exigentes.",
+                "caracteristicas": [
+                    "-Incluye cordones.",
+                    "-Punta de acero"
+                ],
+                "color": [
+                    { "nombre": "Negro", "valor": "black" }
+                ],
+                "talle": "38/45"
+            },
+            {
+                "id": "04",
+                "imagen": "/images/calzados/GRAFA-FT-103.webp",
+                "titulo": "Zapato 103 de Seguridad",
+                "descripcion": "Zapato 103 ideales para trabajar en condiciones exigentes.",
+                "caracteristicas": [
+                    "Plantilla antiperforación",
+                    "Material transpirable",
+                    "Diseño ergonómico"
+                ],
+                "color": [
+                    { "nombre": "Negro", "valor": "black" },
+                    { "nombre": "Gris", "valor": "gray" },
+                    { "nombre": "Verde", "valor": "green" }
+                ],
+                "talle": "39-45"
+            },
+            {
+                "id": "05",
+                "imagen": "/images/calzados/zapatillaBotita.png",
+                "titulo": "zapatillaBotita de Seguridad",
+                "descripcion": "zapatillaBotita ideales para trabajar en condiciones exigentes.",
+                "caracteristicas": [
+                    "-cuero descarne BOX Premium 1.9mm.",
+                    "-Lamina de PVC(ecocuero).",
+                    "-Alta traccion ployester.",
+                    "-Acero 1130(IRAM 3610)"
+                ],
+                "color": [
+                    { "nombre": "Negro", "valor": "black" }
+                ],
+                "talle": "38-45"
+            },
+            {
+                "id": "06",
+                "imagen": "/images/calzados/zapatillaNegra.png",
+                "titulo": "Botin Grafa 70 tipo Frances",
+                "descripcion": "zapatillaNegra ideales para trabajar en condiciones exigentes.",
+                "caracteristicas": [
+                    "-Calzado Dieléctrico",
+                    "-Laminado de PVC (ecocuero)",
+                    "-Cordones: Alta Tracción.",
+                    "-Punta de Acero 1130 (Bajo Norma IRAM 3610)"
+                ],
+                "color": [
+                    { "nombre": "Negro", "valor": "black" }
+                ],
+                "talle": "38-45"
+            },
+            {
+                "id": "07",
+                "imagen": "/images/calzados/ZapatillDeTrabajoConGris.png",
+                "titulo": "Zapatilla De Trabajo de Seguridad",
+                "descripcion": "zapatilla ideales para trabajar en condiciones exigentes.",
+                "caracteristicas": [
+                    "-Incluye cordones.",
+                    "-Punta de acero"
+                ],
+                "color": [
+                    { "nombre": "Negro", "valor": "black" }
+                ],
+                "talle": "38-45"
+            }
+        ],
+        "Chaleco": [
+            {
+                "id": "0001",
+                "imagen": "/images/chalecos/chalecoAmarillo.png",
+                "titulo": "Chaleco Reflectante",
+                "descripcion": "Chaleco ligero y cómodo, ideal para condiciones de baja visibilidad.",
+                "caracteristicas": [
+                    "Material transpirable",
+                    "Reflectores en la parte delantera y trasera",
+                    "Con cierre"
+                ],
+                "color": [
+                    { "nombre": "Amarrillo", "valor": "yellow" }
+                ],
+                "talle": "S-XXL"
+            },
+            {
+                "id": "0002",
+                "imagen": "/images/chalecos/chalecoNaraja.png",
+                "titulo": "Chaleco de Seguridad",
+                "descripcion": "Chaleco ligero y cómodo, ideal para condiciones de baja visibilidad.",
+                "caracteristicas": [
+                    "Material transpirable",
+                    "Reflectores en la parte delantera y trasera",
+                    "Con cierre"
+                ],
+                "color": [
+                    { "nombre": "Naranja", "valor": "orange" }
+                ],
+                "talle": "M-XL"
+            },
+            {
+                "id": "0003",
+                "imagen": "/images/chalecos/chalecoVerde.png",
+                "titulo": "Chaleco de Seguridad",
+                "descripcion": "Chaleco ligero y cómodo, ideal para condiciones de baja visibilidad.",
+                "caracteristicas": [
+                    "Material transpirable",
+                    "Reflectores en la parte delantera y trasera",
+                    "Con cierre"
+                ],
+                "color": [
+                    { "nombre": "Verde", "valor": "green" }
+                ],
+                "talle": "M-XL"
+            }
+        ],
+        "Gabardina": [
+            {
+                "id": "00001",
+                "imagen": "/images/gabardina/camisaAzul.png",
+                "titulo": "Camisa de Trabajo",
+                "descripcion": "Camisa de Trabajo, comodo y ideal para el trabajo.",
+                "caracteristicas": [
+                    "-Gabardina sanforizada 6 Oz",
+                    "-Bolsillos con tapa y tabla",
+                    "-Costuras reforzadas"
+                ],
+                "color": [
+                    { "nombre": "Negro", "valor": "black" },
+                    { "nombre": "Blanco", "valor": "#f0ece5" },
+                    { "nombre": "Beige", "valor": "#b0a190" },
+                    { "nombre": "Verde Oscuro", "valor": "#565644" },
+                    { "nombre": "Azul", "valor": "#000080" }
+                ],
+                "talle": "38/48 - 50/60"
+            },
+            {
+                "id": "00002",
+                "imagen": "/images/gabardina/pantalonAzul.png",
+                "titulo": "Pantalon cargo",
+                "descripcion": "Pantalon cargo, con una buena comodidad y perfecta para Trabajo.",
+                "caracteristicas": [
+                    "-Gabardina Sanforizada 8 Oz",
+                    "-Con Atraques en Bolsillo",
+                    "-Costuras Reforzadas"
+                ],
+                "color": [
+                    { "nombre": "Azul", "valor": "#000080" },
+                    { "nombre": "Blanco", "valor": "#f0ece5" },
+                    { "nombre": "Beige", "valor": "#b0a190" },
+                    {"nombre": "Verde Oscuro", "valor": "#565644" },
+                    {"nombre": "Verde Oscuro", "valor": "#565644" },
+                    {"nombre": "Camuflado", "valor": "#44372f" }
+                ],
+                "talle": "38/48 - 50/60"
+            },
+            {
+                "id": "00003",
+                "imagen": "/images/gabardina/pantalonAzulOscuro.png",
+                "titulo": "Pantalon clasico",
+                "descripcion": "Pantalon clasico, con una buena comodidad y perfecta para Trabajo.",
+                "caracteristicas": [
+                    "-Gabardina Sanforizada 8 Oz",
+                    "-dina Sanforizada 8 Oz.",
+                    "-Fondo de bolsillo en gabardina",
+                    "-Bolsillos traseros tipo ojal"
+                ],
+                "color": [
+                    { "nombre": "Azul", "valor": "#000080" },
+                    { "nombre": "Blanco", "valor": "#f0ece5" },
+                    { "nombre": "Beige", "valor": "#b0a190" },
+                    {"nombre": "Verde Oscuro", "valor": "#565644" }
+                ],
+                "talle": "38/48 - 50/60"
+            },
+            {
+                "id": "00004",
+                "imagen": "/images/gabardina/pantalonBeige.png",
+                "titulo": "Pantalon cargo ripstop",
+                "descripcion": "Pantalon cargo ripstop, con una buena comodidad y perfecta para Trabajo.",
+                "caracteristicas": [
+                    "-Tela Anti desgarro",
+                    "-Bolsillos con tapa y velcro",
+                    "-Triple costura en laterales y entrepiernas",
+                    "-Recorte en trasero y piernas",
+                    "-Cartera con cierre"
+                ],
+                "color": [
+                    { "nombre": "Negro", "valor": "black" },
+                    { "nombre": "Beige", "valor": "#b0a190" },
+                    {"nombre": "Verde Oscuro", "valor": "#565644" },
+                    { "nombre": "Azul", "valor": "#000080" }
+                ],
+                "talle": "38/48 - 50/60"
+            },
+            {
+                "id": "00005",
+                "imagen": "/images/gabardina/pantalonVerdeOpaco.png",
+                "titulo": "Bombacha de campo",
+                "descripcion": "Bombacha de campo, muy comodo y perfecto para su trabajo.",
+                "caracteristicas": [
+                    "-Gabardina Sanforizada 8 Oz",
+                    "-Costura Reforzada.",
+                    "-Presillas Ajustables en botamangas y Puños",
+                    "-Tela Grafa-Recorte en Trasero y Piernas."
+                ],
+                "color": [
+                    { "nombre": "Azul", "valor": "#000080" },
+                    { "nombre": "Blanco", "valor": "#f0ece5" },
+                    { "nombre": "Beige", "valor": "#b0a190" },
+                    {"nombre": "Verde Oscuro", "valor": "#565644" }
+                ],
+                "talle": "38/48 - 50/60"
+            },
+            {
+                "id": "00006",
+                "imagen": "/images/gabardina/PantalonCorto.png",
+                "titulo": "Bermuda cargo",
+                "descripcion": "Bermuda cargo, es comodo y contiene varios bolsillos.",
+                "caracteristicas": [
+                    "Cierre de cremallera",
+                    "Capucha ajustable",
+                    "Costuras selladas"
+                ],
+                "color": [
+                    { "nombre": "Negro", "valor": "black" },
+                    {"nombre": "Verde Oscuro", "valor": "#565644" },
+                    { "nombre": "Azul", "valor": "#000080" },
+                    { "nombre": "Blanco", "valor": "white" },
+                    { "nombre": "Beige", "valor": "#b0a190" },
+                    {"nombre": "Camuflado", "valor": "#44372f" }
+                ],
+                "talle": "38/48 - 50/60"
+            },
+            {
+                "id": "00007",
+                "imagen": "/images/gabardina/Mameluco.png",
+                "titulo": "Mameluco gabardina",
+                "descripcion": "Mameluco gabardina, comodas para el trabajo.",
+                "caracteristicas": [
+                    "-Mameluco con cintura elastizada.",
+                    "-Atraques en los bolsillos y triple Costura, para máxima duración."
+                ],
+                "color": [
+                    {"nombre": "Verde Oscuro", "valor": "#565644" },
+                    { "nombre": "Azul", "valor": "#000080" },
+                    { "nombre": "Blanco", "valor": "white" },
+                    { "nombre": "Beige", "valor": "#b0a190" },
+                    { "nombre": "Naranja", "valor": "oranje" }
+                ],
+                "talle": "S al 3XL"
+            }
+        ],
+        "Trucker": [
+            {
+                "id": "000001",
+                "imagen": "/images/trucker/camperaRompeViento.png",
+                "titulo": "Campera Trucker",
+                "descripcion": "Campera Trucker con estilo clásico y moderno.",
+                "caracteristicas": [
+                    "-Campera Trucker Matelasseada",
+                    "-con guata de 150gr",
+                    "-bolsillo interno",
+                    "-Con Puños",
+                    "-2 bolsillos Externos",
+                    "-Capucha Desmontable"
+                ],
+                "color": [
+                    { "nombre": "Negro", "valor": "black" },
+                    { "nombre": "Azul", "valor": "#000080" },
+                    { "nombre": "Blanco", "valor": "white" }
+                ],
+                "talle": "S al 3XL"
+            },
+            {
+                "id": "000002",
+                "imagen": "/images/trucker/chalecoImperneable.png",
+                "titulo": "Chaleco Trucker",
+                "descripcion": "Chaleco Trucker, con estilo clásico y moderno.",
+                "caracteristicas": [
+                    "-Confeccionado en tela Trucker",
+                    "-Entretela de guata 150 gr",
+                    "-Forro matelaseado en tafeta.",
+                    "-Cuello alto.",
+                    "Cintura con laterales elastizados y Bolsillos inferiores"
+                ],
+                "color": [
+                    { "nombre": "Negro", "valor": "black" },
+                    { "nombre": "Azul", "valor": "#000080" },
+                    { "nombre": "Blanco", "valor": "white" }
+                ],
+                "talle": "S al 3XL"
+            },
+            {
+                "id": "000003",
+                "imagen": "/images/trucker/conjuntoImperneable.png",
+                "titulo": "Mameluco Trucker",
+                "descripcion": "Mameluco trucker, perfecto para trabajar con lluvia o dentro de una cabina.",
+                "caracteristicas": [
+                    "-Confeccionado en tela Trucker, otorgándole gran resistencia y durabilidad.",
+                    "-Cuenta con una capucha desmontable y una tapacierre y manga ranglan."
+                ],
+                "color": [
+                    { "nombre": "Negro", "valor": "black" },
+                    { "nombre": "Azul", "valor": "#000080" },
+                    { "nombre": "Blanco", "valor": "white" }
+                ],
+                "talle": "S al 3XL"
+            },
+            {
+                "id": "000004",
+                "imagen": "/images/trucker/pantalonImperneble.png ",
+                "titulo": "Pantalon Trucker",
+                "descripcion": "Pantalon Trucker, con estilo clásico y moderno.",
+                "caracteristicas": [
+                    "-Pantalón Térmico en tela Trucker.",
+                    "-Repelente al Agua.",
+                    "-Forrado en matelase 180 grs.",
+                    "-Cierre en botamanga."
+                ],
+                "color": [
+                    { "nombre": "Negro", "valor": "black" },
+                    { "nombre": "Azul", "valor": "#000080" },
+                    { "nombre": "Blanco", "valor": "white" }
+                ],
+                "talle": "S-XXL"
+            }
+            
+        ],
+        "Otros": [
+            {
+                "id": "0000001",
+                "imagen": "/images/otros/busoConCuello.png",
+                "titulo": "Campera Softshell",
+                "descripcion": "Campera Softshell, comodo y liviana.",
+                "caracteristicas": [
+                    "-Campera Softshell Impermeable.",
+                    "-Super Liviana.",
+                    "Con Bolsillos."
+                ],
+                "color": [
+                    { "nombre": "Negro", "valor": "black" },
+                    { "nombre": "Gris", "valor": "gray" },
+                    { "nombre": "Azul", "valor": "#000080" },
+                    { "nombre": "Blanco", "valor": "white" }
+                ],
+                "talle": "S al 3XL"
+            },
+            {
+                "id": "0000002",
+                "imagen": "/images/otros/busoDeportivo.png",
+                "titulo": "Campera Neopreno",
+                "descripcion": "Campera Neopreno, ideal para abrigarce.",
+                "caracteristicas": [
+                    "-campera térmica.",
+                    "-interior micropolar y impermeable.",
+                    "-buenas terminaciones.",
+                    "-capucha desmontable",
+                    "-velcro en mangas"
+                ],
+                "color": [
+                    { "nombre": "Negro", "valor": "black" },
+                    { "nombre": "Gris", "valor": "gray" },
+                    { "nombre": "Verde", "valor": "green" },
+                    { "nombre": "Azul", "valor": "#000080" },
+                    { "nombre": "Blanco", "valor": "white" }
+                    
+                ],
+                "talle": "S al 3XL"
+            },
+            {
+                "id": "0000003",
+                "imagen": "/images/otros/busoPolar.png",
+                "titulo": "buso Polar medio cierre",
+                "descripcion": "Accesorios para completar tu equipo de de invierno.",
+                "caracteristicas": [
+                    "-Buzo Polar Anti peeling.",
+                    "-Uso General.",
+                    "-Con bolsillos."
+                ],
+                "color": [
+                    { "nombre": "Negro", "valor": "black" },
+                    { "nombre": "Gris", "valor": "gray" },
+                    { "nombre": "Azul", "valor": "#000080" },
+                    { "nombre": "Blanco", "valor": "white" },
+                    { "nombre": "Rojo", "valor": "red" },
+                    { "nombre": "verde", "valor": "green" }
+                ],
+                "talle": "S al 3XL"
+            },
+            {
+                "id": "0000004",
+                "imagen": "/images/otros/camisaDeTrabajo.png",
+                "titulo": "Camisa de jean",
+                "descripcion": "Camisa de jean, vestimenta de trabajo.",
+                "caracteristicas": [
+                    "-La camisa denim puede ser usada para todo tipo de trabajo.",
+                    "-Ofrece gran comodidad gracias a su composición de 100 Jeans y 6 Onzas"
+                ],
+                "color": [
+                    { "nombre": "Jean", "valor": "#2b314d" }
+                ],
+                "talle": "S al 3XL"
+            },
+            {
+                "id": "0000005",
+                "imagen": "/images/otros/camisetaDeportiva.png",
+                "titulo": "Remera cuello redonda",
+                "descripcion": "Accesorios para completar tu equipo de trabajo.",
+                "caracteristicas": [
+                    "-Calidad Algodón Pique.",
+                    "-Calidad Premium Garantizada.",
+                    "- Costuras Reforzadas.",
+                    "-Manga corta."
+                ],
+                "color": [
+                    { "nombre": "Negro", "valor": "black" },
+                    { "nombre": "Gris", "valor": "gray" },
+                    { "nombre": "Azul", "valor": "#000080" },
+                    { "nombre": "Blanco", "valor": "white" },
+                    { "nombre": "Rojo", "valor": "red" },
+                    { "nombre": "verde", "valor": "green" }
+                ],
+                "talle": "S al 3XL"
+            },
+            {
+                "id": "0000006",
+                "imagen": "/images/otros/chalecoConCierre.png",
+                "titulo": "Chaleco polar",
+                "descripcion": "Accesorios para temporada de invierno.",
+                "caracteristicas": [
+                    "-Chaleco polar.",
+                    "-Con bolsillos.",
+                    "-Anti peeling."
+                ],
+                "color": [
+                    { "nombre": "Negro", "valor": "black" },
+                    { "nombre": "Gris", "valor": "gray" },
+                    { "nombre": "Azul", "valor": "#000080" },
+                    { "nombre": "Blanco", "valor": "white" },
+                    { "nombre": "Rojo", "valor": "red" },
+                    { "nombre": "verde", "valor": "green" }
+                ],
+                "talle": "S al 3XL"
+            },
+            {
+                "id": "0000007",
+                "imagen": "/images/otros/chombaNegra.png",
+                "titulo": "chomba estilo Campo",
+                "descripcion": "Chomba al estilo campo.",
+                "caracteristicas": [
+                    "-Calidad Algodón Pique.",
+                    "-Calidad Premium Garantizada.",
+                    "- Costuras Reforzadas.",
+                    "-Manga corta.",
+                    "- Botones en cuello"
+                ],
+                "color": [
+                    { "nombre": "Negro", "valor": "black" },
+                    { "nombre": "Gris", "valor": "gray" },
+                    { "nombre": "Azul", "valor": "#000080" },
+                    { "nombre": "Blanco", "valor": "white" },
+                    { "nombre": "Rojo", "valor": "red" },
+                    { "nombre": "verde", "valor": "green" }
+                ],
+                "talle": "S al 3XL"
+            },
+            {
+                "id": "0000008",
+                "imagen": "/images/otros/gafasOscuras.png",
+                "titulo": "Gafas de trabajo",
+                "descripcion": "Accesorios para completar tu equipo de trabajo.",
+                "caracteristicas": [
+                    "-Gafas protectoras"
+                ],
+                "color": [
+                    { "nombre": "Negro", "valor": "black" }
+                ],
+                "talle": "estandar"
+            },
+            {
+                "id": "0000009",
+                "imagen": "/images/otros/pantalonJeans.png",
+                "titulo": "Pantalon de Jeans",
+                "descripcion": "Accesorios para completar tu equipo de trabajo.",
+                "caracteristicas": [
+                    "-Pantalón Jean.",
+                    "-Tejido Denim 13 Oz.",
+                    "-Color Azul.",
+                    "-Corte Clásico"
+                ],
+                "color": [
+                            { "nombre": "Jean", "valor": "#2b314d" }
+                ],
+                "talle": "38/48 - 50/60"
+            },{
+                "id": "00000010",
+                "imagen": "/images/otros/sueterGrisConBotones.png",
+                "titulo": "sweater con botones",
+                "descripcion": "Accesorios para vestimenta .",
+                "caracteristicas": [
+                    "-sweater con botones"
+                ],
+                "color": [
+                    { "nombre": "Gris", "valor": "gray" }
+                ],
+                "talle": "S al 3XL"
+            },
+            {
+                "id": "00000011",
+                "imagen": "/images/otros/sueterNegro.png",
+                "titulo": "Buzo cuello redondo",
+                "descripcion": " Vestimenta perfecta para cualquier ocasión.",
+                "caracteristicas": [
+                    "-Su diseño de cuello redondo y puños.",
+                    "-tejidos le da un toque clásico y elegante.",
+                    "-perfecto para cualquier ocasión."
+                ],
+                "color": [
+                    { "nombre": "Negro", "valor": "black" },
+                    { "nombre": "Gris", "valor": "gray" },
+                    { "nombre": "Azul", "valor": "#000080" },
+                    { "nombre": "Blanco", "valor": "white" }
+                ],
+                "talle": "S al 3XL "
+            },
+            {
+                "id": "00000012",
+                "imagen": "/images/otros/sueterNegroConBotones.png",
+                "titulo": "sweater negro con botones ",
+                "descripcion": "Accesorios para temporada de invierno.",
+                "caracteristicas": [
+                    "-Estilo clasico.",
+                    "-Contiene botones."
+                ],
+                "color": [
+                    { "nombre": "Negro", "valor": "black" }
+                ],
+                "talle": "S al 3XL"
+            }
+        ]
+    }
+}

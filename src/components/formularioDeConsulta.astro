@@ -1,0 +1,129 @@
+<dialog id="contactModal">
+    <form action="https://api.staticforms.xyz/submit" method="post" id="contactForm" onsubmit="return handleSubmit(event)">
+        <h2>Contactarnos</h2>
+        <label for="nombre">Nombre Completo:</label>
+        <input type="text" id="nombre" name="name" required>
+
+        <label for="correo">Correo Electrónico:</label>
+        <input type="email" id="correo" name="email" required>
+
+        <label for="consulta">Consulta:</label>
+        <textarea id="consulta" name="message" required></textarea>
+        <input type="hidden" name="accessKey" value="08f1c281-7475-4057-a1ee-f484d570a528">
+        <input type="hidden" name="subject" value="Un nuevo cliente te envió un correo" />
+        <input type="hidden" name="replyTo" value="abel772003@gmail.com">
+        <input type="hidden" name="redirectTo" value="https://jbindustrial-prueba-jmnk.vercel.app/#">
+        <div class="modal-footer">
+            <button type="submit">Enviar</button>
+            <button type="button" id="closeContactModal">Cancelar</button>
+        </div>
+    </form>
+</dialog>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const openModalButton = document.getElementById('openContactModal');
+        const closeModalButton = document.getElementById('closeContactModal');
+        const contactModal = document.getElementById('contactModal');
+        const contactForm = document.getElementById('contactForm');
+
+        // Open the modal when the button is clicked
+        openModalButton.addEventListener('click', function () {
+            contactModal.showModal();
+        });
+
+        // Close the modal when the close button is clicked
+        closeModalButton.addEventListener('click', function () {
+            contactModal.close();
+            clearForm(); // Clear the form when the modal is closed
+        });
+
+        // Function to clear the form fields
+        function clearForm() {
+            contactForm.reset(); // This resets all form fields to their default values
+        }
+    });
+
+    function handleSubmit(event) {
+        event.preventDefault(); // Prevent the default form submission
+
+        // Set a flag in local storage
+        localStorage.setItem('formSubmitted', 'true');
+
+        // Check if the alert has already been shown
+        if (localStorage.getItem('alertShown') !== 'true') {
+            // Display alert
+            alert("El email fue enviado correctamente");
+
+            // Set the alertShown flag to true
+            localStorage.setItem('alertShown', 'true');
+
+            // Use setTimeout to allow the form to submit after the alert
+            setTimeout(() => {
+                document.getElementById('contactForm').submit(); // Submit the form
+            }, 3000); // 3000 milliseconds = 3 seconds
+        } else {
+            // If alert already shown, just submit the form immediately
+            document.getElementById('contactForm').submit();
+        }
+
+        return false; // Prevent immediate form submission
+    }
+</script>
+
+<style>
+    dialog {
+        border: solid 1px #007bff;
+        border-radius: 10px;
+        padding: 20px;
+        width: 400px;
+        background-color: #ffffff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        position: fixed;
+        top: 35%;
+        left: 45%;
+        transform: translate(-50%, -50%);
+        margin: 5%; /* Margin around the modal */
+    }
+
+    dialog::backdrop {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    #contactForm {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #contactForm label {
+        margin: 10px 0 5px;
+    }
+
+    #contactForm input,
+    #contactForm textarea {
+        padding: 10px;
+        margin-bottom: 15px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        font-size: 16px;
+    }
+
+    .modal-footer {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .modal-footer button {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+
+    .modal-footer button:hover {
+        background-color: #0056b3;
+    }
+</style>
